@@ -13,46 +13,51 @@
             <img src="images/mac.png" alt="" class="w-full">
         </section>
         <section id="configuration-part" class="w-1/2 grid mb-20 gap-y-10">
+            <!-- description part -->
             <div>
                 <h1 class="text-5xl font-semibold mb-4 text-gray-600">Customize your Blue 24-inch<br>iMac with Apple M1 chip.</h1>
                 <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse KEyboard-<br>US English</p>
             </div>
+            <!-- extra memory selection part -->
             <div id="memory-selection">
                 <h3 class="text-xl font-semibold text-gray-600">Memory</h3>
                 <div class="my-2">
-                    <button class="border-2 rounded border-gray-700 px-5" id="extraMemory8GB" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="extraMemory8GB" onclick="extraCost(this.id)">
                         8GB unified memory 
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5" id="extraMemory16GB" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="extraMemory16GB" onclick="extraCost(this.id)">
                         16GB unified memory
                     </button>
                 </div>
             </div>
+            <!-- extra storage selection part -->
             <div id="storage-selection">
                 <h3 class="text-xl font-semibold text-gray-600">Storage</h3>
                 <div class="my-2">
-                    <button class="border-2 rounded border-gray-700 px-5" id="ssd256GB" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="ssd256GB" onclick="extraCost(this.id)">
                         256GB SSD Storage 
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5" id="ssd516GB" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="ssd516GB" onclick="extraCost(this.id)">
                         516GB unified memory
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5" id="ssd1TB" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="ssd1TB" onclick="extraCost(this.id)">
                         1TB unified memory
                     </button>
                 </div>
             </div>
+            <!-- delivery option choice part -->
             <div id="delivery-selection">
                 <h3 class="text-xl font-semibold text-gray-600">Choose your delivery option</h3>
                 <div class="my-2">
-                    <button class="border-2 rounded border-gray-700 px-5" id="freeDelivery" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="freeDelivery" onclick="extraCost(this.id)">
                         Friday, Aug 25 FREE Delivery 
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5" id="paidDelivery" onclick="extraCost(this.id)">
+                    <button class="border-2 rounded border-gray-700 px-5 hover:bg-gray-600 hover:text-white" id="paidDelivery" onclick="extraCost(this.id)">
                         Friday, August 21 Delivery Charge $20
                     </button>
                 </div>
             </div>
+            <!-- calculation part -->
             <div id="calculation" class="grid w-1/2">
                 <div class="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Best Price</p>
@@ -75,10 +80,11 @@
                     <p>$<span id="totalPrice">1299</span></p>
                 </div>
             </div>
+            <!-- promo part -->
             <div class="grid">
                 <h3 class="font-semibold text-gray-600">Add Promo Code</h3>
                 <div class="flex my-2 gap-x-4">
-                    <input type="text" class="border rounded pl-2" placeholder="Enter your promo"></input>
+                    <input type="text" id="promoText" class="border rounded pl-2" placeholder="Enter your promo"></input>
                     <button class="border rounded py-1 px-4 bg-red-500 text-white">Apply</button>
                 </div>
 
