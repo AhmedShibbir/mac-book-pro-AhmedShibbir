@@ -57,8 +57,6 @@ function extraCost(extraItem){
             gettingObjet.innerText = notFreeDelivery;
         });
     }
-    const promoValueText = document.getElementById("promoText").value; 
-    console.log(promoValueText);
     totalPriceCalc = parseInt(document.getElementById("initialBestPrice").innerText) + parseInt(document.getElementById("extraMemoryCost").innerText) + parseInt(document.getElementById("extraStorageCost").innerText) + parseInt(document.getElementById("deliveryChargeCalculation").innerText);
     const totalPriceCalculationText = document.getElementById("totalPrice");
     totalPriceCalculationText.innerText = totalPriceCalc;
