@@ -1,3 +1,4 @@
+let clicked = 1;
 function extraCost(extraItem){
     const extraMemory8GbInnerText = 0;
     const extraMemory16GbInnerText = 180;
@@ -8,7 +9,7 @@ function extraCost(extraItem){
     const notFreeDelivery = 20;
     const bestPrice = 1299;
     let totalPriceCalc = 0;
-    // let newTotalSum = 0;
+    let newTotalSum = 0;
     /*  extra memory Part's calculation */
     if(extraItem == "extraMemory8GB"){
         document.getElementById("extraMemory8GB").addEventListener("click", function(){
@@ -63,10 +64,10 @@ function extraCost(extraItem){
     totalPriceCalculationText.innerText = totalPriceCalc;
     const updatedTotalPriceText = document.getElementById("updatedTotal");
     updatedTotalPriceText.innerText = totalPriceCalc;
-    
+    clicked = 1;
 }
-const clicked = 1;
-document.getElementById("promoButton").addEventListener('click', function(){
+//promo part
+document.getElementById("promoButton").addEventListener('click', function promoFunc(){
     const receivedPromoInput = document.getElementById("promoText").value;
     if(receivedPromoInput == "stevekaku" && clicked == 1){
         const discount = parseInt(document.getElementById("totalPrice").innerText)/5;
@@ -76,10 +77,11 @@ document.getElementById("promoButton").addEventListener('click', function(){
         const updatedTotalPriceText = document.getElementById("updatedTotal");
         updatedTotalPriceText.innerText = afterDiscountTotalCost;
         document.getElementById("promoText").value = "";
-        clicked ++;
+        clicked++;
 
     }
     else{
         document.getElementById("promoText").value = "";}
+
 });
     
