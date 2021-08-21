@@ -1,13 +1,14 @@
 function extraCost(extraItem){
-    const extraMemory8GbInnerText = 200;
-    const extraMemory16GbInnerText = 400;
-    const extraStorage256GbInnerText = 500;
-    const extraStorage512GbInnerText = 600;
-    const extraStorage1TbInnerText = 700;
-    const freeDelivery = 00;
-    const notFreeDelivery = 500;
+    const extraMemory8GbInnerText = 0;
+    const extraMemory16GbInnerText = 180;
+    const extraStorage256GbInnerText = 0;
+    const extraStorage512GbInnerText = 100;
+    const extraStorage1TbInnerText = 180;
+    const freeDelivery = 0;
+    const notFreeDelivery = 20;
     const bestPrice = 1299;
-    let newTotalSum = 0;
+    let totalPriceCalc = 0;
+    // let newTotalSum = 0;
     /*  extra memory Part's calculation */
     if(extraItem == "extraMemory8GB"){
         document.getElementById("extraMemory8GB").addEventListener("click", function(){
@@ -55,12 +56,30 @@ function extraCost(extraItem){
             gettingObjet.innerText = notFreeDelivery;
         });
     }
-    let totalPriceCalc = parseInt(document.getElementById("initialBestPrice").innerText) + parseInt(document.getElementById("extraMemoryCost").innerText) + parseInt(document.getElementById("extraStorageCost").innerText) + parseInt(document.getElementById("deliveryChargeCalculation").innerText);
+    const promoValueText = document.getElementById("promoText").value; 
+    console.log(promoValueText);
+    totalPriceCalc = parseInt(document.getElementById("initialBestPrice").innerText) + parseInt(document.getElementById("extraMemoryCost").innerText) + parseInt(document.getElementById("extraStorageCost").innerText) + parseInt(document.getElementById("deliveryChargeCalculation").innerText);
     const totalPriceCalculationText = document.getElementById("totalPrice");
     totalPriceCalculationText.innerText = totalPriceCalc;
     const updatedTotalPriceText = document.getElementById("updatedTotal");
     updatedTotalPriceText.innerText = totalPriceCalc;
     
 }
-    
+const clicked = 1;
+document.getElementById("promoButton").addEventListener('click', function(){
+    const receivedPromoInput = document.getElementById("promoText").value;
+    if(receivedPromoInput == "stevekaku" && clicked == 1){
+        const discount = parseInt(document.getElementById("totalPrice").innerText)/5;
+        let afterDiscountTotalCost = parseInt(document.getElementById("totalPrice").innerText) - discount;
+        const totalPriceCalculationText = document.getElementById("totalPrice");
+        totalPriceCalculationText.innerText = afterDiscountTotalCost;
+        const updatedTotalPriceText = document.getElementById("updatedTotal");
+        updatedTotalPriceText.innerText = afterDiscountTotalCost;
+        document.getElementById("promoText").value = "";
+        clicked ++;
+
+    }
+    else{
+        document.getElementById("promoText").value = "";}
+});
     
