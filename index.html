@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MacBookProJS</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="container mx-auto">
     <main class="flex justify-center my-12 gap-x-12 border-b-2">
-        <section id="image-part" class="w-1/2">
+        <section id="image-part" class="w-1/3">
             <img src="images/mac.png" alt="" class="w-full">
         </section>
         <section id="configuration-part" class="w-1/2 grid mb-20 gap-y-10">
@@ -21,10 +20,10 @@
             <div id="memory-selection">
                 <h3 class="text-xl font-semibold text-gray-600">Memory</h3>
                 <div class="my-2">
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="extraMemory8GB" onclick="extraCost(this.id)">
                         8GB unified memory 
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="extraMemory16GB" onclick="extraCost(this.id)">
                         16GB unified memory
                     </button>
                 </div>
@@ -32,10 +31,10 @@
             <div id="storage-selection">
                 <h3 class="text-xl font-semibold text-gray-600">Storage</h3>
                 <div class="my-2">
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="ssd256GB" onclick="extraCost(this.id)">
                         256GB SSD Storage 
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="ssd516GB" onclick="extraCost(this.id)">
                         516GB unified memory
                     </button>
                     <button class="border-2 rounded border-gray-700 px-5">
@@ -61,15 +60,15 @@
                 </div>
                 <div class="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Extra Memory Cost</p>
-                    <p>$<span>1299</span></p>
+                    <p>$<span id="extraMemoryCost">00</span></p>
                 </div>
                 <div class ="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Extra Storage Cost</p>
-                    <p>$<span>1299</span></p>
+                    <p>$<span id="extraStorageCost">00</span></p>
                 </div>
                 <div class="flex justify-between border-b-2 border-black font-semibold text-gray-600 py-2">
                     <p>Delivery Charge</p>
-                    <p>$<span>1299</span></p>
+                    <p>$<span>00</span></p>
                 </div>
                 <div class="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Total Price</p>
