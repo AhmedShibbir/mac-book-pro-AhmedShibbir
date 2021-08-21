@@ -37,7 +37,7 @@
                     <button class="border-2 rounded border-gray-700 px-5" id="ssd516GB" onclick="extraCost(this.id)">
                         516GB unified memory
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="ssd1TB" onclick="extraCost(this.id)">
                         1TB unified memory
                     </button>
                 </div>
@@ -45,10 +45,10 @@
             <div id="delivery-selection">
                 <h3 class="text-xl font-semibold text-gray-600">Choose your delivery option</h3>
                 <div class="my-2">
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="freeDelivery" onclick="extraCost(this.id)">
                         Friday, Aug 25 FREE Delivery 
                     </button>
-                    <button class="border-2 rounded border-gray-700 px-5">
+                    <button class="border-2 rounded border-gray-700 px-5" id="paidDelivery" onclick="extraCost(this.id)">
                         Friday, August 21 Delivery Charge $20
                     </button>
                 </div>
@@ -56,7 +56,7 @@
             <div id="calculation" class="grid w-1/2">
                 <div class="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Best Price</p>
-                    <p>$<span>1299</span></p>
+                    <p>$<span id="initialBestPrice">1299</span></p>
                 </div>
                 <div class="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Extra Memory Cost</p>
@@ -68,11 +68,11 @@
                 </div>
                 <div class="flex justify-between border-b-2 border-black font-semibold text-gray-600 py-2">
                     <p>Delivery Charge</p>
-                    <p>$<span>00</span></p>
+                    <p>$<span id="deliveryChargeCalculation">00</span></p>
                 </div>
                 <div class="flex justify-between border-b-2 font-semibold text-gray-600 py-2">
                     <p>Total Price</p>
-                    <p>$<span>1299</span></p>
+                    <p>$<span id="totalPrice">1299</span></p>
                 </div>
             </div>
             <div class="grid">
@@ -86,7 +86,7 @@
         </section>
     </main>
     <footer class="flex justify-center font-bold text-5xl text-gray-600">
-        <h1>Total: $<span>1299</span> </h1>
+        <h1>Total: $<span id="updatedTotal">1299</span> </h1>
     </footer>
 
     <script src="js/app.js">
